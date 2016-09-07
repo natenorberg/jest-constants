@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as Constants from 'constants';
-import * as OtherModule from 'otherModule';
 import * as RelativeConstants from './constants';
 
 it('renders without crashing', () => {
@@ -18,9 +17,4 @@ it('loads constants', () => {
 it('loads constants from relative path', () => {
   //console.log(RelativeConstants);
   expect(RelativeConstants.TEST_CONSTANT).toBe('HELLO_WORLD');
-});
-
-it('loads other modules', () => {
-  //console.log(OtherModule);
-  expect(OtherModule.SOME_VALUE).toBe('asdf');
 });
